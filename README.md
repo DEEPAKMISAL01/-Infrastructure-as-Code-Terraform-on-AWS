@@ -43,6 +43,8 @@ Internet → Application Load Balancer → EC2 (Nginx Web Server) → RDS MySQL 
 ---
 
 ## 📁 Project Structure
+
+```text
 devops-terraform-iac-aws/
 │
 ├── provider.tf
@@ -52,28 +54,29 @@ devops-terraform-iac-aws/
 ├── terraform.tfvars
 ├── .gitignore
 │
-└── modules/
-    │
-    ├── vpc/
-    │   ├── main.tf
-    │   ├── variables.tf
-    │   └── outputs.tf
-    │
-    ├── ec2/
-    │   ├── main.tf
-    │   ├── variables.tf
-    │   └── outputs.tf
-    │
-    ├── alb/
-    │   ├── main.tf
-    │   ├── variables.tf
-    │   └── outputs.tf
-    │
-    └── rds/
-        ├── main.tf
-        ├── variables.tf
-        └── outputs.tf
-
+├── modules/
+│   ├── vpc/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   │
+│   ├── ec2/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   │
+│   ├── alb/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   │
+│   └── rds/
+│       ├── main.tf
+│       ├── variables.tf
+│       └── outputs.tf
+│
+└── README.md
+```
 
 ---
 
