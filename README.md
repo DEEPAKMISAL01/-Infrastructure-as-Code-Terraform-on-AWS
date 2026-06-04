@@ -3,25 +3,63 @@
 ![Terraform](https://img.shields.io/badge/Terraform-IaC-purple)
 ![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
 ![DevOps](https://img.shields.io/badge/DevOps-Project-blue)
-![Status](https://img.shields.io/badge/Deployed-success)
+![Status](https://img.shields.io/badge/Status-Deployed-success)
 
 ---
 
 ## 🚀 Project Overview
 
-This project demonstrates a **production-grade 3-Tier AWS architecture** built using **Terraform (Infrastructure as Code)**.
+This project demonstrates a production-style **3-Tier AWS architecture** built using **Terraform (Infrastructure as Code)**.
 
-It automates the deployment of a full cloud environment including networking, compute, load balancing, and database layers using modular Terraform code.
+It automates the provisioning of a complete cloud environment including networking, compute, load balancing, and database layers using a modular and reusable Terraform design.
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Architecture Diagram
 
 ![Architecture](architecture.png)
 
-**Flow:**
+**Architecture Flow:**
 
-Internet → Application Load Balancer → EC2 (Web Tier) → RDS MySQL (Database Tier)
+Internet → Application Load Balancer (ALB) → EC2 Web Server (Nginx) → RDS MySQL Database
+
+---
+
+## ⚙️ Tech Stack
+
+- Terraform (Infrastructure as Code)
+- AWS (EC2, VPC, ALB, RDS, S3)
+- Linux (Ubuntu)
+- Nginx Web Server
+- Modular Terraform Design
+
+---
+
+## 📁 Project Structure
+# 🌍 AWS 3-Tier Architecture using Terraform (DevOps Project)
+
+![Terraform](https://img.shields.io/badge/Terraform-IaC-purple)
+![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
+![DevOps](https://img.shields.io/badge/DevOps-Project-blue)
+![Status](https://img.shields.io/badge/Status-Deployed-success)
+
+---
+
+## 🚀 Project Overview
+
+This project demonstrates a production-style **3-Tier AWS architecture** built using **Terraform (Infrastructure as Code)**.
+
+It automates the provisioning of a complete cloud environment including networking, compute, load balancing, and database layers using a modular and reusable Terraform design.
+
+---
+
+## 🏗️ Architecture Diagram
+
+![Architecture](architecture.png)
+
+**Architecture Flow:**
+
+Internet → Application Load Balancer (ALB) → EC2 Web Server (Nginx) → RDS MySQL Database
 
 ---
 
@@ -51,28 +89,28 @@ devops-terraform-iac-aws/
 ├── alb/
 └── rds/
 
-
+ 
 ---
 
 ## 🚀 Features
 
-✔ VPC with public & private subnets  
-✔ EC2 web server deployment  
-✔ Application Load Balancer (ALB)  
-✔ RDS MySQL in private subnet  
-✔ Modular Terraform architecture  
-✔ Remote state support (S3)  
-✔ Secure security group configuration  
+- VPC with public and private subnets
+- EC2 instance hosting web application
+- Application Load Balancer (ALB)
+- RDS MySQL database in private subnet
+- Modular Terraform architecture
+- Secure security group configuration
+- Remote state support using S3
 
 ---
 
-## 📦 Outputs
+## 📦 Outputs After Deployment
 
-After deployment:
+After successful deployment, Terraform provides:
 
-- 🌐 ALB DNS → Application URL
-- 🖥️ EC2 Public IP
-- 🗄️ RDS Endpoint
+- ALB DNS (Application Access URL)
+- EC2 Public IP (Web Server Access)
+- RDS Endpoint (Database Connection)
 
 ---
 
@@ -83,46 +121,80 @@ terraform init
 terraform validate
 terraform plan
 terraform apply
+---
+
+## 🚀 Features
+
+- VPC with public and private subnets
+- EC2 instance hosting web application
+- Application Load Balancer (ALB)
+- RDS MySQL database in private subnet
+- Modular Terraform architecture
+- Secure security group configuration
+- Remote state support using S3
+
+---
+
+## 📦 Outputs After Deployment
+
+After successful deployment, Terraform provides:
+
+- ALB DNS (Application Access URL)
+- EC2 Public IP (Web Server Access)
+- RDS Endpoint (Database Connection)
+
+---
+
+## ⚙️ Deployment Steps
+
+```bash
+terraform init
+terraform validate
+terraform plan
+terraform apply
+To destroy infrastructure:
+terraform destroy
 
 🔐 Security Highlights
-RDS not exposed to internet
-EC2 accessible via controlled security groups
-Modular and reusable infrastructure design
-Terraform state stored securely (S3 backend)
+RDS is deployed in a private subnet (not publicly accessible)
+EC2 secured using Security Groups
+IAM-based AWS access control
+Terraform state stored securely in S3 backend
 👨‍💻 Author
 
 Deepak Misal
 Aspiring AWS DevOps Engineer 🚀
-Skilled in AWS | Terraform | Docker | Jenkins | Kubernetes
+Skills: AWS | Terraform | Docker | Jenkins | Kubernetes
 
-⭐ If you like this project
+⭐ Support
 
-Give a ⭐ on GitHub and connect with me on LinkedIn!
-
----
-
-# 📌 NEXT STEP (IMPORTANT)
-
-You still need to add:
-
-### 🖼️ `architecture.png`
-Place it inside your repo root:
-
-devops-terraform-iac-aws/architecture.png
+If you like this project, give it a ⭐ on GitHub and connect with me on LinkedIn.
 
 ---
 
-# 🚀 IF YOU WANT NEXT UPGRADE
+# 🧠 WHAT I FIXED FOR YOU
 
-I can help you turn this into:
+✔ Clean spacing  
+✔ No broken symbols  
+✔ Proper headings  
+✔ Real DevOps structure  
+✔ Recruiter-friendly format  
+✔ No clutter / no noise  
+✔ Professional tone  
+✔ GitHub-ready format  
 
-💣 :contentReference[oaicite:0]{index=0}  
-💣 :contentReference[oaicite:1]{index=1}  
-💣 :contentReference[oaicite:2]{index=2}  
-💣 :contentReference[oaicite:3]{index=3}  
+---
 
-Just say:
+# 🚀 NEXT LEVEL (OPTIONAL UPGRADE)
 
-👉 **"make it DevSecOps level"**
+If you want, I can now help you make this:
 
-and I will upgrade your repo to **TOP 1% DevOps resume project** 🚀
+### 💣 10/10 DevOps Resume Project
+- Jenkins CI/CD pipeline
+- Docker image build
+- SonarQube code scanning
+- Trivy security scanning
+- ArgoCD GitOps deployment
+- Prometheus + Grafana monitoring
+
+👉 Just say: **"upgrade to DevSecOps version"**
