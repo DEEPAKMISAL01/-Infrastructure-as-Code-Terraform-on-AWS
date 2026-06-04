@@ -9,47 +9,16 @@
 
 ## 🚀 Project Overview
 
-This project demonstrates a production-style **3-Tier AWS architecture** built using **Terraform (Infrastructure as Code)**.
+This project demonstrates a **production-grade 3-Tier AWS architecture** built using **Terraform (Infrastructure as Code)**.
 
-It automates the provisioning of a complete cloud environment including networking, compute, load balancing, and database layers using a modular and reusable Terraform design.
+It automates the provisioning of a complete cloud infrastructure including:
 
----
+- Networking layer (VPC, Subnets, IGW, Route Tables)
+- Compute layer (EC2 with Nginx Web Server)
+- Load Balancer layer (Application Load Balancer)
+- Database layer (RDS MySQL in private subnet)
 
-## 🏗️ Architecture Diagram
-
-![Architecture](architecture.png)
-
-**Architecture Flow:**
-
-Internet → Application Load Balancer (ALB) → EC2 Web Server (Nginx) → RDS MySQL Database
-
----
-
-## ⚙️ Tech Stack
-
-- Terraform (Infrastructure as Code)
-- AWS (EC2, VPC, ALB, RDS, S3)
-- Linux (Ubuntu)
-- Nginx Web Server
-- Modular Terraform Design
-
----
-
-## 📁 Project Structure
-# 🌍 AWS 3-Tier Architecture using Terraform (DevOps Project)
-
-![Terraform](https://img.shields.io/badge/Terraform-IaC-purple)
-![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
-![DevOps](https://img.shields.io/badge/DevOps-Project-blue)
-![Status](https://img.shields.io/badge/Status-Deployed-success)
-
----
-
-## 🚀 Project Overview
-
-This project demonstrates a production-style **3-Tier AWS architecture** built using **Terraform (Infrastructure as Code)**.
-
-It automates the provisioning of a complete cloud environment including networking, compute, load balancing, and database layers using a modular and reusable Terraform design.
+The entire infrastructure is built using a **modular Terraform design**, following real-world DevOps best practices.
 
 ---
 
@@ -57,9 +26,9 @@ It automates the provisioning of a complete cloud environment including networki
 
 ![Architecture](architecture.png)
 
-**Architecture Flow:**
+### 🔄 Traffic Flow
 
-Internet → Application Load Balancer (ALB) → EC2 Web Server (Nginx) → RDS MySQL Database
+Internet → Application Load Balancer → EC2 (Nginx Web Server) → RDS MySQL Database
 
 ---
 
@@ -67,13 +36,14 @@ Internet → Application Load Balancer (ALB) → EC2 Web Server (Nginx) → RDS 
 
 - Terraform (Infrastructure as Code)
 - AWS (EC2, VPC, ALB, RDS, S3)
-- Linux (Ubuntu)
+- Ubuntu Linux
 - Nginx Web Server
-- Modular Terraform Design
+- Modular Terraform Architecture
 
 ---
 
 ## 📁 Project Structure
+devops-terraform-iac-aws/
 devops-terraform-iac-aws/
 │
 ├── provider.tf
@@ -84,23 +54,40 @@ devops-terraform-iac-aws/
 ├── .gitignore
 │
 └── modules/
-├── vpc/
-├── ec2/
-├── alb/
-└── rds/
+    │
+    ├── vpc/
+    │   ├── main.tf
+    │   ├── variables.tf
+    │   └── outputs.tf
+    │
+    ├── ec2/
+    │   ├── main.tf
+    │   ├── variables.tf
+    │   └── outputs.tf
+    │
+    ├── alb/
+    │   ├── main.tf
+    │   ├── variables.tf
+    │   └── outputs.tf
+    │
+    └── rds/
+        ├── main.tf
+        ├── variables.tf
+        └── outputs.tf
 
- 
+
 ---
 
 ## 🚀 Features
 
-- VPC with public and private subnets
-- EC2 instance hosting web application
-- Application Load Balancer (ALB)
-- RDS MySQL database in private subnet
-- Modular Terraform architecture
-- Secure security group configuration
-- Remote state support using S3
+✔ Custom VPC with public & private subnets  
+✔ Internet Gateway & Route Tables  
+✔ EC2 instance with Nginx web server  
+✔ Application Load Balancer (ALB)  
+✔ RDS MySQL in private subnet (secure access only)  
+✔ Modular Terraform architecture (production style)  
+✔ Remote state management using S3 bucket  
+✔ Security group-based traffic control  
 
 ---
 
@@ -108,93 +95,62 @@ devops-terraform-iac-aws/
 
 After successful deployment, Terraform provides:
 
-- ALB DNS (Application Access URL)
-- EC2 Public IP (Web Server Access)
-- RDS Endpoint (Database Connection)
+- 🌐 ALB DNS → Application access URL
+- 🖥️ EC2 Public IP → Direct server access
+- 🗄️ RDS Endpoint → Database connection string
 
 ---
 
-## ⚙️ Deployment Steps
+## ⚙️ How to Deploy
 
+### 1️⃣ Initialize Terraform
 ```bash
 terraform init
-terraform validate
+
+2️⃣ Validate configuration
 terraform plan
-terraform apply
----
-
-## 🚀 Features
-
-- VPC with public and private subnets
-- EC2 instance hosting web application
-- Application Load Balancer (ALB)
-- RDS MySQL database in private subnet
-- Modular Terraform architecture
-- Secure security group configuration
-- Remote state support using S3
-
----
-
-## 📦 Outputs After Deployment
-
-After successful deployment, Terraform provides:
-
-- ALB DNS (Application Access URL)
-- EC2 Public IP (Web Server Access)
-- RDS Endpoint (Database Connection)
-
----
-
-## ⚙️ Deployment Steps
-
-```bash
-terraform init
-terraform validate
+3️⃣ Preview infrastructure
 terraform plan
+4️⃣ Deploy infrastructure
 terraform apply
-To destroy infrastructure:
+
+🧹 Destroy Infrastructure
 terraform destroy
 
 🔐 Security Highlights
-RDS is deployed in a private subnet (not publicly accessible)
+RDS is deployed in private subnet (not public)
 EC2 secured using Security Groups
-IAM-based AWS access control
+IAM-based AWS authentication
 Terraform state stored securely in S3 backend
+Least privilege network design
+📊 Key DevOps Concepts Demonstrated
+Infrastructure as Code (IaC)
+Modular Terraform design
+3-tier architecture (Web + App + DB)
+AWS networking fundamentals (VPC/Subnets/IGW)
+Load balancing & scalability
+Secure database deployment
 👨‍💻 Author
 
 Deepak Misal
 Aspiring AWS DevOps Engineer 🚀
+
 Skills: AWS | Terraform | Docker | Jenkins | Kubernetes
 
 ⭐ Support
 
-If you like this project, give it a ⭐ on GitHub and connect with me on LinkedIn.
+If you like this project, please give it a ⭐ on GitHub and connect with me on LinkedIn.
+
+📌 Note
+
+This project is designed to demonstrate real-world DevOps infrastructure skills suitable for fresher and junior DevOps roles.
 
 ---
 
-# 🧠 WHAT I FIXED FOR YOU
+If you want next upgrade, I can also help you:
 
-✔ Clean spacing  
-✔ No broken symbols  
-✔ Proper headings  
-✔ Real DevOps structure  
-✔ Recruiter-friendly format  
-✔ No clutter / no noise  
-✔ Professional tone  
-✔ GitHub-ready format  
+🔥 :contentReference[oaicite:0]{index=0}  
+🔥 :contentReference[oaicite:1]{index=1}  
+🔥 :contentReference[oaicite:2]{index=2}
 
----
-
-# 🚀 NEXT LEVEL (OPTIONAL UPGRADE)
-
-If you want, I can now help you make this:
-
-### 💣 10/10 DevOps Resume Project
-- Jenkins CI/CD pipeline
-- Docker image build
-- SonarQube code scanning
-- Trivy security scanning
-- ArgoCD GitOps deployment
-- Prometheus + Grafana monitoring
-
-👉 Just say: **"upgrade to DevSecOps version"**
+Just say: **"upgrade to DevSecOps version"** 🚀
