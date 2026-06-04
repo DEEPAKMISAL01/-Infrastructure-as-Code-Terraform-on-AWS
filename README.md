@@ -125,6 +125,7 @@ EC2 secured using Security Groups
 IAM-based AWS authentication
 Terraform state stored securely in S3 backend
 Least privilege network design
+
 📊 Key DevOps Concepts Demonstrated
 Infrastructure as Code (IaC)
 Modular Terraform design
@@ -132,10 +133,11 @@ Modular Terraform design
 AWS networking fundamentals (VPC/Subnets/IGW)
 Load balancing & scalability
 Secure database deployment
-👨‍💻 Author
 
+👨‍💻 Author
 Deepak Misal
 Aspiring AWS DevOps Engineer 🚀
+
 
 Skills: AWS | Terraform | Docker | Jenkins | Kubernetes
 
