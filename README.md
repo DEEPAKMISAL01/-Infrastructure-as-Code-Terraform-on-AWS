@@ -44,7 +44,6 @@ Internet → Application Load Balancer → EC2 (Nginx Web Server) → RDS MySQL 
 
 ## 📁 Project Structure
 devops-terraform-iac-aws/
-devops-terraform-iac-aws/
 │
 ├── provider.tf
 ├── main.tf
